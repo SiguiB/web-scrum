@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.header{
+  background-image: linear-gradient(rgba(255, 121, 11, 0.3),rgba(0,88,156,0.7)), url(./img/banner.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height:100vh;
+  width: 100%;
+}
+
+#logo{
+  border-radius: 2.125em;
+  width: 8.5em;
+}
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links{
+  flex:1;
+  text-align: right;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display:inline-block;
+  padding: 0.5em 0.75em ;
+  position: relative;
+}
+.nav-links a{
+  color:rgb(255, 254, 254);
+  text-decoration:none;
+  font-size:1.2em ;
+}
+.nav-links ul li::after{
+  content:'' ;
+  width: 0%;
+  height: 0.125em;
+  background: #0545c4;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+.intro{
+  width: 90%;
+  color: rgb(253, 250, 248);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  text-align: center;
+}
+.intro h1{
+  font-size: 3.625em;
+  color: #f5f5f5;
+}
+.intro p{
+  margin:10px 0 30px;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+}
+nav .fa{
+  display: none;
+}
+@media(max-width: 700px){
+  .intro h1{
+      font-size: 1.563em;
+  }
+  .nav-links ul li{
+      display:block;
+  }
+  .nav-links{
+      position:absolute;
+      background: rgb(4, 84, 142);
+      height: 100vh;
+      width: 12.5em;
+      top: 0;
+      right: -12.5em;
+      z-index: 2;
+      text-align: left;
+      transition: 1s;
+  }
+  nav .fa{
+      display: block;
+      color: #fff;
+      margin: 0.625em;
+      font-size: 1.25em;
+      cursor: pointer;
+  }
+  .nav-links ul{
+      padding: 0.938em;
+  }
+}
+
+/*Info empresa*/
+.info{
+  width: 85%;
+  margin:auto;
+  padding-top: 6.25em;
+  text-align: center;
+}
+.info p{
+  color: #063970;
+  font-size:1.5em ;
+  margin-bottom: 5em;
+  text-align: center;
+  text-align: justify;
+}
+.info h2{
+  color: rgb(6, 118, 187);
+  font-size: 2em;
+  padding: 0.625px;
+  margin-bottom: 0.3em;
+}
+.stats{
+  margin-top:5%;
+  display: flex;
+  justify-content: space-between;
+}
+.graficos{
+  box-sizing: border-box;
+  border-radius: 20%;
+}
+
+.graficos img{
+  height: 18.75em;
+}
+
+
+@media(max-width: 700px){
+  .info p{
+      color: #063970;
+      font-size: 0.938em;
+      margin-bottom: 3em;
+      text-align: center;
+      text-align: justify;
+  }
+  .info h2{
+      color: rgb(6, 118, 187);
+      font-size: 1.6em;
+      padding: 0.1em;
+      text-align: left;
+      margin-bottom: 0.3em;
+  }
+  .stats{
+      flex-direction: column;
+  }
+  .graficos{
+      margin-bottom: 0.938em;
+  }
+}   
+
+/*Referencia*/
+footer{
+  background-color: rgb(5, 64, 135);
+}
+
+.rfc{
+  margin: 100px auto;
+  width: 80%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  text-align: center;
+  padding: 100px 0;
+}
+.rfc h1{
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.rfc #contact{
+  text-decoration: none;
+  color:rgb(255, 255, 255) ;
+  font-family: 'Nunito', sans-serif;
+  font-size: 28px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  font-weight: bolder;
+  padding:4px ;
+}
+.rfc #contact:hover{
+  color: rgb(235, 80, 9);
+  background:rgb(5, 64, 135) ;
+}
+
+@media(max-width: 700px){
+  .rfc h1{
+      font-size: 20px;
+      margin-bottom: 30px;
+  }
+  .rfc a{
+      font-size: 18px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
